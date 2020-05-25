@@ -1,0 +1,1 @@
+web gunicorn northeast.wsgi --log-file -
