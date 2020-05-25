@@ -25,7 +25,7 @@ SECRET_KEY = 'wk2ly*5&w0mh#digu_ab55_(of_0$i6rf=f3d^0_p0v*a-p=jw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['explore-ne.herokuapp.com']
 
 # if DEBUG:
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #during development, change later for live
