@@ -78,21 +78,21 @@ WSGI_APPLICATION = 'northeast.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'northeast',
-    #     'USER': 'postgres',
-    #     'PASSWORD': '1234',
-    #     'HOST': 'localhost'
-    # }
-    # use settings below only when project is in production otherwise use settings above
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6dv9cl9q2bseg',
-        'USER': 'iizbmslwpdsiff',
-        'PASSWORD': '519f26c4abd1ef7feb32156f9530b0268c33a33da5bba44740f09d484ebff421',
-        'HOST': 'ec2-52-202-22-140.compute-1.amazonaws.com'
+        'NAME': 'northeast',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': 'localhost'
     }
+    # use settings below only when project is in production otherwise use settings above
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'd6dv9cl9q2bseg',
+    #     'USER': 'iizbmslwpdsiff',
+    #     'PASSWORD': '519f26c4abd1ef7feb32156f9530b0268c33a33da5bba44740f09d484ebff421',
+    #     'HOST': 'ec2-52-202-22-140.compute-1.amazonaws.com'
+    # }
     #https://data.heroku.com/datastores/0272dbce-9273-4d29-b059-d682f7724e58
 }
 
