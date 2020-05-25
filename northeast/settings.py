@@ -85,6 +85,14 @@ DATABASES = {
     #     'PASSWORD': '1234',
     #     'HOST': 'localhost'
     # }
+    # use settings below only when project is in production otherwise use settings above
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'northeast',
+        'USER': 'iizbmslwpdsiff',
+        'PASSWORD': '519f26c4abd1ef7feb32156f9530b0268c33a33da5bba44740f09d484ebff421',
+        'HOST': 'ec2-52-202-22-140.compute-1.amazonaws.com'
+    }
     #https://data.heroku.com/datastores/0272dbce-9273-4d29-b059-d682f7724e58
 }
 
@@ -135,9 +143,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # tryin to resolve database issue 
-from decouple import config
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('https://data.heroku.com/datastores/0272dbce-9273-4d29-b059-d682f7724e58')
-    )
-}
+# from decouple import config
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('https://data.heroku.com/datastores/0272dbce-9273-4d29-b059-d682f7724e58')
+#     )
+# }
