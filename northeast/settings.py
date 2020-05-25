@@ -78,13 +78,14 @@ WSGI_APPLICATION = 'northeast.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'northeast',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost'
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'northeast',
+    #     'USER': 'postgres',
+    #     'PASSWORD': '1234',
+    #     'HOST': 'localhost'
+    # }
+    #https://data.heroku.com/datastores/0272dbce-9273-4d29-b059-d682f7724e58
 }
 
 
@@ -132,3 +133,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# tryin to resolve database issue 
+from decouple import config
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('https://data.heroku.com/datastores/0272dbce-9273-4d29-b059-d682f7724e58')
+    )
+}
